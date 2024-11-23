@@ -17,7 +17,7 @@ if [ "$response" != "y" ]; then
 fi
 
 echo "Remotely obtaining architecture..."
-architecture=$(ssh $2@$3 "curl -sSLf $GET_CURRENT_ARCH_URL | bash")
+architecture=$(ssh $2@$3 "source <(curl -sSLf $GET_CURRENT_ARCH_URL) && get_current_arch")
 if [ -z "$architecture" ]; then
 	echo "Failed to obtain architecture."
 	exit 1
