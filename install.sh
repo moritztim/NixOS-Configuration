@@ -18,6 +18,10 @@ fi
 
 echo "Remotely obtaining architecture..."
 architecture=$(ssh root@$2 "curl -sSLf $GET_CURRENT_ARCH_URL | bash")
+if [ -z "$architecture" ]; then
+	echo "Failed to obtain architecture."
+	exit 1
+fi
 echo "Architecture: $architecture"
 
 echo "Remotely executing kexec installer image..."
