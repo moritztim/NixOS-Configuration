@@ -7,7 +7,7 @@ $NIXOS_KEXEC_INSTALLER_VERSION="2.1.0"
 $GET_CURRENT_ARCH_URL="https://raw.githubusercontent.com/moritztim/nixos-kexec-installer/refs/tags/$NIXOS_KEXEC_INSTALLER_VERSION/src/get_current_arch.sh"
 $NIXOS_KEXEC_INSTALLER_URL="https://github.com/moritztim/nixos-kexec-installer/releases/download/$NIXOS_KEXEC_INSTALLER_VERSION/nixos-kexec.sh"
 
-echo 'This script will remotely wipe the system "$2" and erect "$1" in its place.'
+echo "This script will remotely wipe the system \"$2\" and erect \"$1\" in its place."
 echo "Are you sure you want to continue? [y/N]"
 read -r response
 
