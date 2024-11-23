@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Set commit message to sentence case (first letter of the commit is upper case, following letters remain untouched)
+# Based on https://github.com/gabyx/Githooks/blob/7a0d751ad06b4914dbd02ffcbeedfff98ec6dba5/.githooks/commit-msg/add-random-emoji
+
+if [ ! -f "$1" ] || grep -q "fixup!" "$1"; then
+		# Exit if we didn't get a target file for some reason
+		# or we have a fixup commit
+		exit 0
+fi
+
+if command -v gsed &>/dev/null; then
+		SED="gsed"
+else
+		SED="sed"
+fi
+
+if ! $SED --version 2>&1 | grep -q "GNU"; then
+		echo "! Install GNU sed for updating the templates." >&2
+		exit 1
+fi
+
+$SED -i 's/^./\U&/' "$1"

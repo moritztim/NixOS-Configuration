@@ -1,0 +1,3 @@
+[submodule "nixos-kexec-installer"]
+	path = nixos-kexec-installer
+	url = https://github.com/moritztim/nixos-kexec-installer.git
