@@ -17,8 +17,8 @@ if [ "$response" != "y" ]; then
 fi
 
 echo "Remotely obtaining architecture..."
-
 architecture=$(ssh root@$2 "curl -sSLf $GET_CURRENT_ARCH_URL | bash")
+echo "Architecture: $architecture"
 
 echo "Remotely executing kexec installer image..."
 ssh root@$2 "bash <(curl -sSLf $NIXOS_KEXEC_INSTALLER_URL) --install"
