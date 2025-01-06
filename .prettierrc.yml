@@ -2,7 +2,7 @@
 
 # The following should be handled when displaying, not when writing text.
 useTabs: true # Tabs are made for indentation, spaces are a hack.
-proseWrap: never
-printWidth: 256 # Shouldn't be limited, but realistically 256 won't be exceeded.
+proseWrap: never # Unfortunately, this only applies to markdown.
+printWidth: 80 # Sadly, Prettier overrides manual wrapping below this width.
 
 trailingComma: all # Avoids unnecessary diffs when adding new items.
