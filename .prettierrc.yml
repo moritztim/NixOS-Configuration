@@ -3,6 +3,6 @@
 # The following should be handled when displaying, not when writing text.
 useTabs: true # Tabs are made for indentation, spaces are a hack.
 proseWrap: never
-printWidth: 80 # Shouldn't be limited, but realistically 256 won't be exceeded.
+printWidth: 256 # Shouldn't be limited, but realistically 256 won't be exceeded.
 
 trailingComma: all # Avoids unnecessary diffs when adding new items.
