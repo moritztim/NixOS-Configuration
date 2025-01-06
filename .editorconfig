@@ -1,10 +1,9 @@
 # EditorConfig is awesome: https://EditorConfig.org
 
 [*]
-indent_style = tab
-indent_size = 2
-end_of_line = lf
-charset = utf-8
+root = true # This is the top-most EditorConfig file.
+indent_style = tab # Tabs are made for indentation, spaces are a hack.
 trim_trailing_whitespace = true
-insert_final_newline = true
-root = true
+charset = utf-8
+end_of_line = lf # Unix-style line endings
+insert_final_newline = true # POSIX requires termination of every line.
